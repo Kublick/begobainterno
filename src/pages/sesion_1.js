@@ -5,8 +5,6 @@ import Img from "gatsby-image";
 import VideoLoader from "../components/videoplayer";
 import CommentsFacebook from "../components/commentsFacebook";
 import ReactPlayer from "react-player";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp, faFacebook } from "@fortawesome/free-brands-svg-icons";
 
 const Landing = () => {
 	const data = useStaticQuery(
@@ -36,6 +34,20 @@ const Landing = () => {
 				sesion4: file(relativePath: { eq: "sesion4.png" }) {
 					childImageSharp {
 						fixed(quality: 90, width: 144) {
+							...GatsbyImageSharpFixed_withWebp
+						}
+					}
+				}
+				whatsapp: file(relativePath: { eq: "WhatsApp_Logo_1.png" }) {
+					childImageSharp {
+						fixed(quality: 100, width: 288) {
+							...GatsbyImageSharpFixed_withWebp
+						}
+					}
+				}
+				facebook: file(relativePath: { eq: "fb.png" }) {
+					childImageSharp {
+						fixed(quality: 100, width: 72) {
 							...GatsbyImageSharpFixed_withWebp
 						}
 					}
@@ -97,7 +109,7 @@ const Landing = () => {
 					<VideoLoader
 						videoUrl="http://youtu.be/2uLODu3-Cpg"
 						urlRedirect={urlRedirect}
-						buttonText="Unirte a la comunidad"
+						buttonText="descargar Regalo"
 					/>
 				</div>
 			</div>
@@ -111,13 +123,12 @@ const Landing = () => {
 						<div className="divider-left">
 							<ul>
 								<li className="preguntas__testimonios__list">
-									¿Qué significaría para ti facturar 5 cifras al año trabajando
-									online desde tu casa o desde cualquier lugar del mundo en algo
-									que te apasiona?
+									¿Cual es el mayor desafío que tuviste al querer vender tus
+									servicios profesionales en internet?
 								</li>
 								<li className="preguntas__testimonios__list">
-									¿Por qué te gustaría conseguirlo ahora y no dentro de 1, 2, o
-									3 años?
+									¿Te gustaría aprender a vender tu servicio de consulta por
+									internet?
 								</li>
 							</ul>
 						</div>
@@ -133,16 +144,10 @@ const Landing = () => {
 				<div className="testimonios">
 					<div className="testimonios__social">
 						<a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
-							<FontAwesomeIcon
-								icon={faWhatsapp}
-								className="testimonios__social__icon"
-							/>
+							<Img fixed={data.whatsapp.childImageSharp.fixed} />
 						</a>
 						<a href="https://www.facebook.com/groups/2375070212786505">
-							<FontAwesomeIcon
-								icon={faFacebook}
-								className="testimonios__social__icon"
-							/>
+							<Img fixed={data.facebook.childImageSharp.fixed} />
 						</a>
 					</div>
 					<div className="testimonios__videos">

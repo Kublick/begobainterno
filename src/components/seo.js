@@ -17,10 +17,10 @@ function SEO({ description, lang, meta, keywords, title }) {
 	`);
 
 	const metaDescription = description || site.siteMetadata.description;
-	const image =
-		metaImage && metaImage.src
-			? `${site.siteMetadata.siteUrl}${metaImage.src}`
-			: null;
+	// const image =
+	// 	metaImage && metaImage.src
+	// 		? `${site.siteMetadata.siteUrl}${metaImage.src}`
+	// 		: null;
 
 	return (
 		<Helmet
