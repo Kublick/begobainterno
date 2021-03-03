@@ -7,11 +7,8 @@ const VideoLoader = ({ videoUrl, urlRedirect, buttonText }) => {
 	const communityButton = () => {
 		setTimeout(() => {
 			setButton(true);
-		}, 5000);
+		}, 1200000);
 	};
-
-	communityButton();
-	//1200000
 
 	const redirect = () => {
 		window.open(urlRedirect);

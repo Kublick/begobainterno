@@ -5,9 +5,6 @@ import Img from "gatsby-image";
 import VideoLoader from "../components/videoplayer";
 import CommentsFacebook from "../components/commentsFacebook";
 import ReactPlayer from "react-player";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faWhatsapp, faFacebook } from "@fortawesome/free-brands-svg-icons";
-import { Link } from "gatsby";
 
 const Landing = () => {
 	const data = useStaticQuery(
@@ -41,11 +38,25 @@ const Landing = () => {
 						}
 					}
 				}
+				whatsapp: file(relativePath: { eq: "WhatsApp_Logo_1.png" }) {
+					childImageSharp {
+						fixed(quality: 100, width: 288) {
+							...GatsbyImageSharpFixed_withWebp
+						}
+					}
+				}
+				facebook: file(relativePath: { eq: "fb.png" }) {
+					childImageSharp {
+						fixed(quality: 100, width: 72) {
+							...GatsbyImageSharpFixed_withWebp
+						}
+					}
+				}
 			}
 		`
 	);
 
-	let date = "March 11, 2021 00:30";
+	let date = "March 9, 2021 00:30";
 	let urlRedirect = "https://www.facebook.com/groups/2375070212786505/";
 
 	return (
@@ -54,19 +65,15 @@ const Landing = () => {
 			<div className="container content">
 				<div className="cards">
 					<div className="cards__body">
-						<Link to="/sesion_1" className="cards__body">
-							<p className="cards__top-text animate-pulsate">
-								Ahora Disponible
-							</p>
-							<Img fixed={data.sesion1.childImageSharp.fixed} />
-							<h2 className="cards__footer__title">Sesión 1</h2>
-							<p className="cards__footer__note">
-								Tu gran oportunidad de tener a tus pacientes en todo el mundo
-							</p>
-						</Link>
-					</div>
-					<div className="cards__body">
 						<p className="cards__top-text animate-pulsate">Ahora Disponible</p>
+						<Img fixed={data.sesion1.childImageSharp.fixed} />
+						<h2 className="cards__footer__title">Sesión 1</h2>
+						<p className="cards__footer__note">
+							Tu gran oportunidad de tener a tus pacientes en todo el mundo
+						</p>
+					</div>
+					<div className="cards__body__incoming">
+						<p className="cards__top-text">Proximamente!</p>
 						<Img fixed={data.sesion2.childImageSharp.fixed} />
 						<h2 className="cards__footer__title">Sesión 2</h2>
 						<p className="cards__footer__note">
@@ -94,15 +101,15 @@ const Landing = () => {
 			</div>
 
 			<div className="container">
-				<h1 className="video__heading">Sesión #2</h1>
+				<h1 className="video__heading">Sesión #1</h1>
 				<h1 className="video__paragraph">
-					7 formas de tener dinero 100% online y los 5 errores de novato
+					Tu gran oportunidad de tener pacientes en todo el mundo.
 				</h1>
-				<div className="video__player">
+				<div className="">
 					<VideoLoader
-						videoUrl="https://youtu.be/ByX2ckVhwFk"
+						videoUrl="http://youtu.be/2uLODu3-Cpg"
 						urlRedirect={urlRedirect}
-						buttonText="Unirte a la comunidad"
+						buttonText="descargar regalo"
 					/>
 				</div>
 			</div>
@@ -111,20 +118,17 @@ const Landing = () => {
 				<div className="preguntas">
 					<div>
 						<h1 className="preguntas__heading">
-							Cuéntanos tres cosas muy importantes para que podamos ayudarte:
+							Cuéntanos dos cosas muy importantes para que podamos ayudarte:
 						</h1>
 						<div className="divider-left">
 							<ul>
 								<li className="preguntas__testimonios__list">
-									Escribe textualmente "yo tambien puedo incrementar mi número
-									de pacientes y duplicar mis ingresos"
+									¿Cual es el mayor desafío que tuviste al querer vender tus
+									servicios profesionales en internet?
 								</li>
 								<li className="preguntas__testimonios__list">
-									¿Qué forma de tener dinero online te gusta para ti?
-								</li>
-								<li className="preguntas__testimonios__list">
-									¿Cuándo te gustaria comenzar a aprender e implementar como
-									hacer dinero de forma online?
+									¿Te gustaría aprender a vender tu servicio de consulta por
+									internet?
 								</li>
 							</ul>
 						</div>
@@ -140,16 +144,10 @@ const Landing = () => {
 				<div className="testimonios">
 					<div className="testimonios__social">
 						<a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
-							<FontAwesomeIcon
-								icon={faWhatsapp}
-								className="testimonios__social__icon"
-							/>
+							<Img fixed={data.whatsapp.childImageSharp.fixed} />
 						</a>
 						<a href="https://www.facebook.com/groups/2375070212786505">
-							<FontAwesomeIcon
-								icon={faFacebook}
-								className="testimonios__social__icon"
-							/>
+							<Img fixed={data.facebook.childImageSharp.fixed} />
 						</a>
 					</div>
 					<div className="testimonios__videos">

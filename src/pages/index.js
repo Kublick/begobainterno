@@ -1,5 +1,5 @@
 import * as React from "react";
-import Landing from "./sesion_1";
+import Landing from "./s1";
 import SEO from "../components/seo";
 
 const IndexPage = () => {

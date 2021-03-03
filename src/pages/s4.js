@@ -50,7 +50,7 @@ const Landing = () => {
 			<div className="container content">
 				<div className="cards">
 					<div className="cards__body">
-						<Link to="/sesion_1" className="cards__body">
+						<Link to="/s1" className="cards__body">
 							<p className="cards__top-text animate-pulsate">
 								Ahora Disponible
 							</p>
@@ -62,7 +62,7 @@ const Landing = () => {
 						</Link>
 					</div>
 					<div className="cards__body">
-						<Link to="/sesion_2" className="cards__body">
+						<Link to="/s2" className="cards__body">
 							<p className="cards__top-text animate-pulsate">
 								Ahora Disponible
 							</p>
@@ -74,7 +74,7 @@ const Landing = () => {
 						</Link>
 					</div>
 					<div className="cards__body">
-						<Link to="/sesion_3" className="cards__body">
+						<Link to="/s3" className="cards__body">
 							<p className="cards__top-text animate-pulsate">
 								Ahora Disponible
 							</p>
@@ -104,11 +104,11 @@ const Landing = () => {
 					Vence tu inseguridad y tus miedos tu siguietne paso para vivir de tus
 					consultas
 				</h1>
-				<div className="video__player">
+				<div className="">
 					<VideoLoader
 						videoUrl="https://youtu.be/yLPLFklI1hU"
 						urlRedirect={urlRedirect}
-						buttonText="inscribirme em el entrenamiento"
+						buttonText="inscribirme en el entrenamiento"
 					/>
 				</div>
 			</div>
