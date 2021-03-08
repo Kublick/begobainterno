@@ -56,7 +56,7 @@ const Landing = () => {
 			}
 		`
 	);
-	let date = "March 13 2021 00:30";
+	let date = "March 12 2021 16:30";
 	let urlRedirect = "https://wa.me/message/LD54V7JCH3TXD1";
 
 	return (

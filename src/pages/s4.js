@@ -41,7 +41,7 @@ const Landing = () => {
 		`
 	);
 
-	let date = "March 16,2021 00:30";
+	let date = "March 15,2021 16:30";
 	let urlRedirect = "https://pay.hotmart.com/W42168207B?checkoutMode=10";
 
 	return (

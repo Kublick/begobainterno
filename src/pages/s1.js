@@ -56,8 +56,8 @@ const Landing = () => {
 		`
 	);
 
-	let date = "March 9, 2021 00:30";
-	let urlRedirect = "https://www.facebook.com/groups/2375070212786505/";
+	let date = "March 8, 2021 16:30";
+	let urlRedirect = "https://www.begoba.com/interno/regalo";
 
 	return (
 		<div>
