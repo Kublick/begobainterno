@@ -40,7 +40,7 @@ const Landing = () => {
 				}
 				whatsapp: file(relativePath: { eq: "WhatsApp_Logo_1.png" }) {
 					childImageSharp {
-						fixed(quality: 100, width: 288) {
+						fixed(quality: 100, width: 144) {
 							...GatsbyImageSharpFixed_withWebp
 						}
 					}

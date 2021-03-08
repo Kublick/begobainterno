@@ -46,6 +46,13 @@ const Landing = () => {
 						}
 					}
 				}
+				whatsapp: file(relativePath: { eq: "WhatsApp_Logo_1.png" }) {
+					childImageSharp {
+						fixed(quality: 100, width: 144) {
+							...GatsbyImageSharpFixed_withWebp
+						}
+					}
+				}
 			}
 		`
 	);
@@ -146,6 +153,9 @@ const Landing = () => {
 
 				<div className="testimonios">
 					<div className="testimonios__social">
+						<a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
+							<Img fixed={data.whatsapp.childImageSharp.fixed} />
+						</a>
 						<a href="https://www.facebook.com/groups/2375070212786505">
 							<Img fixed={data.facebook.childImageSharp.fixed} />
 						</a>
