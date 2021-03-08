@@ -342,3 +342,53 @@
 		}
 	}
 }
+
+.mobileButton {
+	display: none;
+
+	@media only screen and (max-width: 414px) {
+		display: flex;
+		margin: 2rem auto;
+		font-size: 1.5rem;
+		border: none;
+		font-weight: 600;
+		text-transform: uppercase;
+		border-radius: 100px;
+		border: none;
+		background-color: var(--color-primary-dark);
+		padding: 1.5rem 2.5rem;
+		color: white;
+		cursor: pointer;
+		text-decoration: none;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			transition-timing-function: ease-in-out;
+			transform: scale(1.1);
+		}
+		&::after {
+			content: "";
+			display: inline-block;
+			height: 100%;
+			width: 100%;
+			border-radius: 10rem;
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+			transition: all 0.4s;
+		}
+
+		&--animated {
+			animation: moveInBottom 0.5s ease-out 0.75s;
+			animation-fill-mode: backwards;
+		}
+	}
+}
+
+.m4 {
+	padding: 0.3rem;
+}

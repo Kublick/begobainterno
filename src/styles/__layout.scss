@@ -80,3 +80,20 @@
 		border-radius: 0px;
 	}
 }
+
+order-container {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.box-1 {
+	padding: 2rem 2rem;
+	background-color: red;
+	order: 2;
+}
+
+.box-2 {
+	padding: 2rem 2rem;
+	background-color: purple;
+	order: 1;
+}

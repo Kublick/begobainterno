@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Header } from "../components/header";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, navigate, useStaticQuery } from "gatsby";
 import Img from "gatsby-image";
 import VideoLoader from "../components/videoplayer";
 import CommentsFacebook from "../components/commentsFacebook";
@@ -57,62 +57,96 @@ const Landing = () => {
 	);
 
 	let date = "March 8, 2021 16:30";
+	let eventButton = "March 8, 2021 17:10";
+	const [sessionButton, setSessionButton] = useState(false);
+
+	function timing() {
+		setInterval(() => {
+			let tempdate = date;
+			let currentDate = Date.now();
+
+			if (currentDate > new Date(tempdate)) {
+				setSessionButton(true);
+			}
+		}, 5000);
+	}
+	timing();
+
 	let urlRedirect = "https://www.begoba.com/interno/regalo";
+
+	const redirectNext = () => {
+		navigate("/s2");
+	};
 
 	return (
 		<div>
 			<Header date={date} />
-			<div className="container content">
-				<div className="cards">
-					<div className="cards__body">
-						<p className="cards__top-text animate-pulsate">Ahora Disponible</p>
-						<Img fixed={data.sesion1.childImageSharp.fixed} />
-						<h2 className="cards__footer__title">Sesión 1</h2>
-						<p className="cards__footer__note">
-							Tu gran oportunidad de tener a tus pacientes en todo el mundo
-						</p>
+			<div className="order-container">
+				<div className="container content">
+					<div className="cards">
+						<div className="cards__body">
+							<p className="cards__top-text animate-pulsate">
+								Ahora Disponible
+							</p>
+							<Img fixed={data.sesion1.childImageSharp.fixed} />
+							<h2 className="cards__footer__title">Sesión 1</h2>
+							<p className="cards__footer__note">
+								Tu gran oportunidad de tener a tus pacientes en todo el mundo
+							</p>
+						</div>
+						<div className="cards__body__incoming">
+							<p className="cards__top-text">Proximamente!</p>
+							<Img fixed={data.sesion2.childImageSharp.fixed} />
+							<h2 className="cards__footer__title">Sesión 2</h2>
+							<p className="cards__footer__note">
+								7 formas de tener dinero 100% online y los 5 errores de novato
+							</p>
+						</div>
+						<div className="cards__body__incoming">
+							<p className="cards__top-text">Proximamente</p>
+							<Img fixed={data.sesion3.childImageSharp.fixed} />
+							<h2 className="cards__footer__title">Sesión 3</h2>
+							<p className="cards__footer__note">
+								Consigue tus primeros pacientes online con la estrategia
+								D.E.P.E.
+							</p>
+						</div>
+						<div className="cards__body__incoming">
+							<p className="cards__top-text">Proximamente</p>
+							<Img fixed={data.sesion4.childImageSharp.fixed} />
+							<h2 className="cards__footer__title">Sesión 4</h2>
+							<p className="cards__footer__note">
+								Vence tu inseguridad y tus miedos tu siguietne paso para vivir
+								de tus consultas
+							</p>
+						</div>
 					</div>
-					<div className="cards__body__incoming">
-						<p className="cards__top-text">Proximamente!</p>
-						<Img fixed={data.sesion2.childImageSharp.fixed} />
-						<h2 className="cards__footer__title">Sesión 2</h2>
-						<p className="cards__footer__note">
-							7 formas de tener dinero 100% online y los 5 errores de novato
-						</p>
-					</div>
-					<div className="cards__body__incoming">
-						<p className="cards__top-text">Proximamente</p>
-						<Img fixed={data.sesion3.childImageSharp.fixed} />
-						<h2 className="cards__footer__title">Sesión 3</h2>
-						<p className="cards__footer__note">
-							Consigue tus primeros pacientes online con la estrategia D.E.P.E.
-						</p>
-					</div>
-					<div className="cards__body__incoming">
-						<p className="cards__top-text">Proximamente</p>
-						<Img fixed={data.sesion4.childImageSharp.fixed} />
-						<h2 className="cards__footer__title">Sesión 4</h2>
-						<p className="cards__footer__note">
-							Vence tu inseguridad y tus miedos tu siguietne paso para vivir de
-							tus consultas
-						</p>
+				</div>
+
+				<div className="container">
+					<h1 className="video__heading">Sesión #1</h1>
+					<h1 className="video__paragraph">
+						Tu gran oportunidad de tener pacientes en todo el mundo.
+					</h1>
+					<div className="">
+						<VideoLoader
+							videoUrl="http://youtu.be/2uLODu3-Cpg"
+							urlRedirect={urlRedirect}
+							buttonText="descargar regalo"
+							date={eventButton}
+						/>
+						<div className="m4">
+							{sessionButton ? (
+								<button className="mobileButton" onClick={() => redirectNext()}>
+									Siguiente Sesión
+								</button>
+							) : null}
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<div className="container">
-				<h1 className="video__heading">Sesión #1</h1>
-				<h1 className="video__paragraph">
-					Tu gran oportunidad de tener pacientes en todo el mundo.
-				</h1>
-				<div className="">
-					<VideoLoader
-						videoUrl="http://youtu.be/2uLODu3-Cpg"
-						urlRedirect={urlRedirect}
-						buttonText="descargar regalo"
-					/>
-				</div>
-			</div>
+			<div className="container"></div>
 
 			<div className="container_split">
 				<div className="preguntas">
