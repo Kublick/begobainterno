@@ -1,11 +1,10 @@
 import React from "react";
 import { Header } from "../components/header";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 import VideoLoader from "../components/videoplayer";
-import { Link } from "gatsby";
 
-const Landing = () => {
+const Sesion4 = () => {
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -116,4 +115,4 @@ const Landing = () => {
 	);
 };
 
-export default Landing;
+export default Sesion4;

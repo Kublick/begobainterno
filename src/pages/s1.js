@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Header } from "../components/header";
-import { graphql, navigate, useStaticQuery } from "gatsby";
+import { graphql, navigate, useStaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 import VideoLoader from "../components/videoplayer";
 import CommentsFacebook from "../components/commentsFacebook";
@@ -56,23 +56,22 @@ const Landing = () => {
 		`
 	);
 
-	let date = "March 8, 2021 16:30";
-	let eventButton = "March 8, 2021 17:10";
-	const [sessionButton, setSessionButton] = useState(false);
-
-	function timing() {
-		setInterval(() => {
-			let tempdate = date;
-			let currentDate = Date.now();
-
-			if (currentDate > new Date(tempdate)) {
-				setSessionButton(true);
-			}
-		}, 5000);
-	}
-	timing();
-
+	let date = "March 10, 2021 16:30";
+	let eventButton = "March 8, 2021 17:15";
 	let urlRedirect = "https://www.begoba.com/interno/regalo";
+	// const [sessionButton, setSessionButton] = useState(false);
+
+	// function timing() {
+	// 	setInterval(() => {
+	// 		let tempdate = date;
+	// 		let currentDate = Date.now();
+
+	// 		if (currentDate > new Date(tempdate)) {
+	// 			setSessionButton(true);
+	// 		}
+	// 	}, 10000);
+	// }
+	// timing();
 
 	const redirectNext = () => {
 		navigate("/s2");
@@ -94,16 +93,18 @@ const Landing = () => {
 								Tu gran oportunidad de tener a tus pacientes en todo el mundo
 							</p>
 						</div>
-						<div className="cards__body__incoming">
-							<p className="cards__top-text">Proximamente!</p>
-							<Img fixed={data.sesion2.childImageSharp.fixed} />
-							<h2 className="cards__footer__title">Sesión 2</h2>
-							<p className="cards__footer__note">
-								7 formas de tener dinero 100% online y los 5 errores de novato
-							</p>
+						<div className="cards__body">
+							<Link to="/s2" className="cards__body">
+								<p className="cards__top-text">Proximamente!</p>
+								<Img fixed={data.sesion2.childImageSharp.fixed} />
+								<h2 className="cards__footer__title">Sesión 2</h2>
+								<p className="cards__footer__note">
+									7 formas de tener dinero 100% online y los 5 errores de novato
+								</p>
+							</Link>
 						</div>
 						<div className="cards__body__incoming">
-							<p className="cards__top-text">Proximamente</p>
+							<p className="cards__top-text">Proximamente!</p>
 							<Img fixed={data.sesion3.childImageSharp.fixed} />
 							<h2 className="cards__footer__title">Sesión 3</h2>
 							<p className="cards__footer__note">
@@ -112,7 +113,7 @@ const Landing = () => {
 							</p>
 						</div>
 						<div className="cards__body__incoming">
-							<p className="cards__top-text">Proximamente</p>
+							<p className="cards__top-text">Proximamente!</p>
 							<Img fixed={data.sesion4.childImageSharp.fixed} />
 							<h2 className="cards__footer__title">Sesión 4</h2>
 							<p className="cards__footer__note">
@@ -136,11 +137,9 @@ const Landing = () => {
 							date={eventButton}
 						/>
 						<div className="m4">
-							{sessionButton ? (
-								<button className="mobileButton" onClick={() => redirectNext()}>
-									Siguiente Sesión
-								</button>
-							) : null}
+							<button className="mobileButton" onClick={() => redirectNext()}>
+								Siguiente Sesión
+							</button>
 						</div>
 					</div>
 				</div>

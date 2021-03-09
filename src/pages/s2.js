@@ -1,13 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../components/header";
-import { graphql, useStaticQuery } from "gatsby";
+import { graphql, useStaticQuery, navigate, Link } from "gatsby";
 import Img from "gatsby-image";
 import VideoLoader from "../components/videoplayer";
 import CommentsFacebook from "../components/commentsFacebook";
 import ReactPlayer from "react-player";
-import { Link } from "gatsby";
 
-const Landing = () => {
+const Sesion2 = () => {
 	const data = useStaticQuery(
 		graphql`
 			query {
@@ -58,7 +57,30 @@ const Landing = () => {
 	);
 
 	let date = "March 10, 2021 16:30";
+	let eventButton = "March 10, 2021 17:15";
 	let urlRedirect = "https://www.facebook.com/groups/2375070212786505/";
+
+	const [sessionButton, setSessionButton] = useState(false);
+
+	function timing() {
+		setInterval(() => {
+			let tempdate = date;
+			let currentDate = Date.now();
+
+			if (currentDate > new Date(tempdate)) {
+				setSessionButton(true);
+			}
+		}, 10000);
+	}
+	timing();
+
+	const redirectPrevious = () => {
+		navigate("/s1");
+	};
+
+	const redirectNext = () => {
+		navigate("/s3");
+	};
 
 	return (
 		<div>
@@ -115,7 +137,20 @@ const Landing = () => {
 						videoUrl="https://youtu.be/ByX2ckVhwFk"
 						urlRedirect={urlRedirect}
 						buttonText="Unirte a la comunidad"
+						date={eventButton}
 					/>
+					<div className="m4">
+						{sessionButton ? (
+							<button className="mobileButton" onClick={() => redirectNext()}>
+								Siguiente Sesión
+							</button>
+						) : null}
+					</div>
+					<div className="m4">
+						<button className="mobileButton" onClick={() => redirectPrevious()}>
+							Sesión Anterior
+						</button>
+					</div>
 				</div>
 			</div>
 
@@ -192,4 +227,4 @@ const Landing = () => {
 	);
 };
 
-export default Landing;
+export default Sesion2;
