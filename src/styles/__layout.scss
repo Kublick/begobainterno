@@ -97,3 +97,17 @@ order-container {
 	background-color: purple;
 	order: 1;
 }
+
+.inscripcion-container {
+	max-width: 78%;
+	margin: 2rem auto;
+}
+
+.inscripcion-container-white {
+	max-width: 78%;
+	margin: 2rem auto;
+	background-color: #fff;
+	box-shadow: var(--shadow-dark);
+	border-radius: 10px;
+	padding: 0 2rem;
+}

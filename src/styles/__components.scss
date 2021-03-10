@@ -190,6 +190,12 @@
 	padding: 0 4rem;
 }
 
+.icon {
+	width: 1rem;
+	height: 1rem;
+	margin-right: 0.5rem;
+}
+
 .communityButton {
 	margin: 3rem 0;
 	font-size: 1.5rem;
@@ -391,4 +397,90 @@
 
 .m4 {
 	padding: 0.3rem;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+}
+
+.inscripcion {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
+
+	padding: 2rem 2rem;
+
+	&__image {
+		opacity: 0.5%;
+	}
+
+	&__header {
+		padding: 1rem;
+		font-size: 2rem;
+		text-align: center;
+		color: white;
+	}
+
+	&__subheader {
+		font-size: 1.5rem;
+		text-align: center;
+		color: white;
+	}
+
+	&__subheader-red {
+		font-size: 1.5rem;
+		padding: 1rem 0;
+		text-align: center;
+	}
+
+	&__third {
+		font-size: 1.2rem;
+		text-align: center;
+		color: white;
+		padding: 1rem 0;
+
+		&__strong {
+			font-size: 1.5rem;
+		}
+	}
+
+	&__third-red {
+		font-size: 1.2rem;
+		text-align: center;
+		padding: 1rem 0;
+	}
+
+	&__button {
+		margin: 1.5rem 0;
+		font-size: 1rem;
+		border: none;
+		font-weight: 700;
+		text-transform: uppercase;
+		border: none;
+		background-color: var(--color-primary-pink-light);
+		border-radius: 0.5rem;
+		padding: 1rem 4rem;
+		color: white;
+		cursor: pointer;
+
+		&:focus {
+			outline: none;
+		}
+
+		&:hover {
+			transition-timing-function: ease-in-out;
+			transform: scale(1.1);
+		}
+	}
+
+	&__list {
+		list-style-type: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding: 2rem 2rem;
+	}
 }
