@@ -1,6 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { Header } from "../components/header";
-import { graphql, useStaticQuery, Link } from "gatsby";
+import { graphql, useStaticQuery, Link, navigate } from "gatsby";
 import Img from "gatsby-image";
 import VideoLoader from "../components/videoplayer";
 import CommentsFacebook from "../components/commentsFacebook";
@@ -56,7 +56,30 @@ const Sesion3 = () => {
 		`
 	);
 	let date = "March 12 2021 16:30";
+	let eventButton = "March 12, 2021 17:15";
 	let urlRedirect = "https://wa.me/message/LD54V7JCH3TXD1";
+
+	const [sessionButton, setSessionButton] = useState(false);
+
+	function timing() {
+		setInterval(() => {
+			let tempdate = date;
+			let currentDate = Date.now();
+
+			if (currentDate > new Date(tempdate)) {
+				setSessionButton(true);
+			}
+		}, 10000);
+	}
+	timing();
+
+	const redirectPrevious = () => {
+		navigate("/s1");
+	};
+
+	const redirectNext = () => {
+		navigate("/s3");
+	};
 
 	return (
 		<div>
@@ -117,7 +140,20 @@ const Sesion3 = () => {
 						videoUrl="https://youtu.be/4PeuijTGeWE"
 						urlRedirect={urlRedirect}
 						buttonText="Anotarme en la lista Prioritaria"
+						date={eventButton}
 					/>
+					<div className="m4">
+						{sessionButton ? (
+							<button className="mobileButton" onClick={() => redirectNext()}>
+								Siguiente Sesión
+							</button>
+						) : null}
+					</div>
+					<div className="m4">
+						<button className="mobileButton" onClick={() => redirectPrevious()}>
+							Sesión Anterior
+						</button>
+					</div>
 				</div>
 			</div>
 

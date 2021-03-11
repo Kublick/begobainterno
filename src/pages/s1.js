@@ -56,7 +56,7 @@ const Landing = () => {
 		`
 	);
 
-	let date = "March 10, 2021 16:30";
+	let date = "March 12 2021 16:30";
 	let eventButton = "March 8, 2021 17:15";
 	let urlRedirect = "https://www.begoba.com/interno/regalo";
 	// const [sessionButton, setSessionButton] = useState(false);
@@ -95,7 +95,7 @@ const Landing = () => {
 						</div>
 						<div className="cards__body">
 							<Link to="/s2" className="cards__body">
-								<p className="cards__top-text">Proximamente!</p>
+								<p className="cards__top-text">Ahora Disponible</p>
 								<Img fixed={data.sesion2.childImageSharp.fixed} />
 								<h2 className="cards__footer__title">Sesión 2</h2>
 								<p className="cards__footer__note">
@@ -103,14 +103,16 @@ const Landing = () => {
 								</p>
 							</Link>
 						</div>
-						<div className="cards__body__incoming">
-							<p className="cards__top-text">Proximamente!</p>
-							<Img fixed={data.sesion3.childImageSharp.fixed} />
-							<h2 className="cards__footer__title">Sesión 3</h2>
-							<p className="cards__footer__note">
-								Consigue tus primeros pacientes online con la estrategia
-								D.E.P.E.
-							</p>
+						<div className="cards__body">
+							<Link to="/s3" className="cards__body">
+								<p className="cards__top-text">Proximamente!</p>
+								<Img fixed={data.sesion3.childImageSharp.fixed} />
+								<h2 className="cards__footer__title">Sesión 3</h2>
+								<p className="cards__footer__note">
+									Consigue tus primeros pacientes online con la estrategia
+									D.E.P.E.
+								</p>
+							</Link>
 						</div>
 						<div className="cards__body__incoming">
 							<p className="cards__top-text">Proximamente!</p>

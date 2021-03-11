@@ -56,7 +56,7 @@ const Sesion2 = () => {
 		`
 	);
 
-	let date = "March 10, 2021 16:30";
+	let date = "March 12 2021 16:30";
 	let eventButton = "March 10, 2021 17:15";
 	let urlRedirect = "https://www.facebook.com/groups/2375070212786505/";
 
@@ -107,13 +107,16 @@ const Sesion2 = () => {
 							7 formas de tener dinero 100% online y los 5 errores de novato
 						</p>
 					</div>
-					<div className="cards__body__incoming">
-						<p className="cards__top-text">Proximamente</p>
-						<Img fixed={data.sesion3.childImageSharp.fixed} />
-						<h2 className="cards__footer__title">Sesión 3</h2>
-						<p className="cards__footer__note">
-							Consigue tus primeros pacientes online con la estrategia D.E.P.E.
-						</p>
+					<div className="cards__body">
+						<Link to="/s3" className="cards__body">
+							<p className="cards__top-text animate-pulsate">Proximamente</p>
+							<Img fixed={data.sesion3.childImageSharp.fixed} />
+							<h2 className="cards__footer__title">Sesión 3</h2>
+							<p className="cards__footer__note">
+								Consigue tus primeros pacientes online con la estrategia
+								D.E.P.E.
+							</p>
+						</Link>
 					</div>
 					<div className="cards__body__incoming">
 						<p className="cards__top-text">Proximamente</p>
