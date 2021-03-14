@@ -56,7 +56,7 @@ const Landing = () => {
 		`
 	);
 
-	let date = "March 12 2021 16:30";
+	let date = "March 15 2021 16:30";
 	let eventButton = "March 8, 2021 17:15";
 	let urlRedirect = "https://www.begoba.com/interno/regalo";
 	// const [sessionButton, setSessionButton] = useState(false);
@@ -95,7 +95,9 @@ const Landing = () => {
 						</div>
 						<div className="cards__body">
 							<Link to="/s2" className="cards__body">
-								<p className="cards__top-text">Ahora Disponible</p>
+								<p className="cards__top-text animate-pulsate">
+									Ahora Disponible
+								</p>
 								<Img fixed={data.sesion2.childImageSharp.fixed} />
 								<h2 className="cards__footer__title">Sesión 2</h2>
 								<p className="cards__footer__note">
@@ -105,7 +107,9 @@ const Landing = () => {
 						</div>
 						<div className="cards__body">
 							<Link to="/s3" className="cards__body">
-								<p className="cards__top-text">Proximamente!</p>
+								<p className="cards__top-text animate-pulsate">
+									Ahora Disponible
+								</p>
 								<Img fixed={data.sesion3.childImageSharp.fixed} />
 								<h2 className="cards__footer__title">Sesión 3</h2>
 								<p className="cards__footer__note">
@@ -114,14 +118,16 @@ const Landing = () => {
 								</p>
 							</Link>
 						</div>
-						<div className="cards__body__incoming">
-							<p className="cards__top-text">Proximamente!</p>
-							<Img fixed={data.sesion4.childImageSharp.fixed} />
-							<h2 className="cards__footer__title">Sesión 4</h2>
-							<p className="cards__footer__note">
-								Vence tu inseguridad y tus miedos tu siguietne paso para vivir
-								de tus consultas
-							</p>
+						<div className="cards__body">
+							<Link to="/s4" className="cards__body">
+								<p className="cards__top-text animate-pulsate">Proximamente!</p>
+								<Img fixed={data.sesion4.childImageSharp.fixed} />
+								<h2 className="cards__footer__title">Sesión 4</h2>
+								<p className="cards__footer__note">
+									Vence tu inseguridad y tus miedos tu siguietne paso para vivir
+									de tus consultas
+								</p>
+							</Link>
 						</div>
 					</div>
 				</div>

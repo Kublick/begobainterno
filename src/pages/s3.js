@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Header } from "../components/header";
 import { graphql, useStaticQuery, Link, navigate } from "gatsby";
 import Img from "gatsby-image";
@@ -55,30 +55,30 @@ const Sesion3 = () => {
 			}
 		`
 	);
-	let date = "March 12 2021 16:30";
+	let date = "March 15 2021 16:30";
 	let eventButton = "March 12, 2021 17:15";
 	let urlRedirect = "https://wa.me/message/LD54V7JCH3TXD1";
 
-	const [sessionButton, setSessionButton] = useState(false);
+	// const [sessionButton, setSessionButton] = useState(false);
 
-	function timing() {
-		setInterval(() => {
-			let tempdate = date;
-			let currentDate = Date.now();
+	// function timing() {
+	// 	setInterval(() => {
+	// 		let tempdate = date;
+	// 		let currentDate = Date.now();
 
-			if (currentDate > new Date(tempdate)) {
-				setSessionButton(true);
-			}
-		}, 10000);
-	}
-	timing();
+	// 		if (currentDate > new Date(tempdate)) {
+	// 			setSessionButton(true);
+	// 		}
+	// 	}, 10000);
+	// }
+	// timing();
 
 	const redirectPrevious = () => {
-		navigate("/s1");
+		navigate("/s2");
 	};
 
 	const redirectNext = () => {
-		navigate("/s3");
+		navigate("/s4");
 	};
 
 	return (
@@ -142,18 +142,15 @@ const Sesion3 = () => {
 						buttonText="Anotarme en la lista Prioritaria"
 						date={eventButton}
 					/>
-					<div className="m4">
-						{sessionButton ? (
-							<button className="mobileButton" onClick={() => redirectNext()}>
-								Siguiente Sesión
-							</button>
-						) : null}
-					</div>
-					<div className="m4">
+					<d iv className="m4">
 						<button className="mobileButton" onClick={() => redirectPrevious()}>
 							Sesión Anterior
 						</button>
-					</div>
+
+						<button className="mobileButton" onClick={() => redirectNext()}>
+							Siguiente Sesión
+						</button>
+					</d>
 				</div>
 			</div>
 

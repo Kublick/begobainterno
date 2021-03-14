@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Header } from "../components/header";
 import { graphql, useStaticQuery, navigate, Link } from "gatsby";
 import Img from "gatsby-image";
@@ -55,24 +55,23 @@ const Sesion2 = () => {
 			}
 		`
 	);
-
-	let date = "March 12 2021 16:30";
+	let date = "March 15 2021 16:30";
 	let eventButton = "March 10, 2021 17:15";
 	let urlRedirect = "https://www.facebook.com/groups/2375070212786505/";
 
-	const [sessionButton, setSessionButton] = useState(false);
+	// const [sessionButton, setSessionButton] = useState(false);
 
-	function timing() {
-		setInterval(() => {
-			let tempdate = date;
-			let currentDate = Date.now();
+	// function timing() {
+	// 	setInterval(() => {
+	// 		let tempdate = date;
+	// 		let currentDate = Date.now();
 
-			if (currentDate > new Date(tempdate)) {
-				setSessionButton(true);
-			}
-		}, 10000);
-	}
-	timing();
+	// 		if (currentDate > new Date(tempdate)) {
+	// 			setSessionButton(true);
+	// 		}
+	// 	}, 10000);
+	// }
+	// timing();
 
 	const redirectPrevious = () => {
 		navigate("/s1");
@@ -109,7 +108,9 @@ const Sesion2 = () => {
 					</div>
 					<div className="cards__body">
 						<Link to="/s3" className="cards__body">
-							<p className="cards__top-text animate-pulsate">Proximamente</p>
+							<p className="cards__top-text animate-pulsate">
+								Ahora Disponible
+							</p>
 							<Img fixed={data.sesion3.childImageSharp.fixed} />
 							<h2 className="cards__footer__title">Sesión 3</h2>
 							<p className="cards__footer__note">
@@ -118,14 +119,16 @@ const Sesion2 = () => {
 							</p>
 						</Link>
 					</div>
-					<div className="cards__body__incoming">
-						<p className="cards__top-text">Proximamente</p>
-						<Img fixed={data.sesion4.childImageSharp.fixed} />
-						<h2 className="cards__footer__title">Sesión 4</h2>
-						<p className="cards__footer__note">
-							Vence tu inseguridad y tus miedos tu siguietne paso para vivir de
-							tus consultas
-						</p>
+					<div className="cards__body">
+						<Link to="/s3" className="cards__body">
+							<p className="cards__top-text animate-pulsate">Proximamente</p>
+							<Img fixed={data.sesion4.childImageSharp.fixed} />
+							<h2 className="cards__footer__title">Sesión 4</h2>
+							<p className="cards__footer__note">
+								Vence tu inseguridad y tus miedos tu siguietne paso para vivir
+								de tus consultas
+							</p>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -143,15 +146,16 @@ const Sesion2 = () => {
 						date={eventButton}
 					/>
 					<div className="m4">
-						{sessionButton ? (
-							<button className="mobileButton" onClick={() => redirectNext()}>
-								Siguiente Sesión
+						<div className="m4">
+							<button
+								className="mobileButton"
+								onClick={() => redirectPrevious()}
+							>
+								Sesión Anterior
 							</button>
-						) : null}
-					</div>
-					<div className="m4">
-						<button className="mobileButton" onClick={() => redirectPrevious()}>
-							Sesión Anterior
+						</div>
+						<button className="mobileButton" onClick={() => redirectNext()}>
+							Siguiente Sesión
 						</button>
 					</div>
 				</div>

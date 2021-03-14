@@ -3,6 +3,8 @@ import { Header } from "../components/header";
 import { graphql, useStaticQuery, Link } from "gatsby";
 import Img from "gatsby-image";
 import VideoLoader from "../components/videoplayer";
+import CommentsFacebook from "../components/commentsFacebook";
+import ReactPlayer from "react-player";
 
 const Sesion4 = () => {
 	const data = useStaticQuery(
@@ -32,6 +34,13 @@ const Sesion4 = () => {
 				sesion4: file(relativePath: { eq: "sesion4.png" }) {
 					childImageSharp {
 						fixed(quality: 90, width: 144) {
+							...GatsbyImageSharpFixed_withWebp
+						}
+					}
+				}
+				whatsapp: file(relativePath: { eq: "WhatsApp_Logo_1.png" }) {
+					childImageSharp {
+						fixed(quality: 100, width: 144) {
 							...GatsbyImageSharpFixed_withWebp
 						}
 					}
@@ -108,6 +117,72 @@ const Sesion4 = () => {
 						videoUrl="https://youtu.be/yLPLFklI1hU"
 						urlRedirect={urlRedirect}
 						buttonText="inscribirme en el entrenamiento"
+					/>
+				</div>
+			</div>
+			<div className="container_split">
+				<div className="preguntas">
+					<div>
+						<h1 className="preguntas__heading">
+							Cuéntanos tres cosas muy importantes para que podamos ayudarte:
+						</h1>
+						<div className="divider-left">
+							<ul>
+								<li className="preguntas__testimonios__list">
+									Escribe textualmente "yo tambien puedo incrementar mi número
+									de pacientes y duplicar mis ingresos"
+								</li>
+								<li className="preguntas__testimonios__list">
+									¿Qué forma de tener dinero online te gusta para ti?
+								</li>
+							</ul>
+						</div>
+						<p className="preguntas__testimonios__footer">
+							!Nos vemos en los comentarios!
+						</p>
+					</div>
+					<div className="preguntas__facebook">
+						<CommentsFacebook />
+					</div>
+				</div>
+
+				<div className="testimonios">
+					<div className="testimonios__social">
+						<a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
+							<Img fixed={data.whatsapp.childImageSharp.fixed} />
+						</a>
+					</div>
+					<div className="testimonios__videos">
+						<ReactPlayer
+							url="https://youtu.be/iGA3w0YVac8"
+							width={320}
+							height={320}
+						/>
+					</div>
+
+					<div className="testimonios__videos">
+						<ReactPlayer
+							url="https://youtu.be/c1XGvy-ynZs"
+							width={320}
+							height={320}
+						/>
+					</div>
+					<ReactPlayer
+						url="https://youtu.be/NmL3jxP9BB0"
+						width={320}
+						height={320}
+					/>
+					<div className="testimonios__videos">
+						<ReactPlayer
+							url="https://youtu.be/6_MBqp7E3Zw"
+							width={320}
+							height={320}
+						/>
+					</div>
+					<ReactPlayer
+						url="https://youtu.be/gpXgrVIJrms"
+						width={320}
+						height={320}
 					/>
 				</div>
 			</div>
