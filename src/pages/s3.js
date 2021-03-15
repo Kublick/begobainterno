@@ -118,14 +118,16 @@ const Sesion3 = () => {
 							Consigue tus primeros pacientes online con la estrategia D.E.P.E.
 						</p>
 					</div>
-					<div className="cards__body__incoming">
-						<p className="cards__top-text">Proximamente</p>
-						<Img fixed={data.sesion4.childImageSharp.fixed} />
-						<h2 className="cards__footer__title">Sesión 4</h2>
-						<p className="cards__footer__note">
-							Vence tu inseguridad y tus miedos tu siguietne paso para vivir de
-							tus consultas
-						</p>
+					<div className="cards__body">
+						<Link to="/s4" className="cards__body">
+							<p className="cards__top-text">Proximamente</p>
+							<Img fixed={data.sesion4.childImageSharp.fixed} />
+							<h2 className="cards__footer__title">Sesión 4</h2>
+							<p className="cards__footer__note">
+								Vence tu inseguridad y tus miedos tu siguietne paso para vivir
+								de tus consultas
+							</p>
+						</Link>
 					</div>
 				</div>
 			</div>
@@ -137,7 +139,7 @@ const Sesion3 = () => {
 				</h1>
 				<div className="">
 					<VideoLoader
-						videoUrl="https://youtu.be/4PeuijTGeWE"
+						videoUrl="https://youtu.be/eJ5KNnL_lCo"
 						urlRedirect={urlRedirect}
 						buttonText="Anotarme en la lista Prioritaria"
 						date={eventButton}

@@ -50,7 +50,8 @@ const Sesion4 = () => {
 	);
 
 	let date = "March 15,2021 16:30";
-	let urlRedirect = "https://pay.hotmart.com/W42168207B?checkoutMode=10";
+	let urlRedirect = "https://es.surveymonkey.com/r/6DBTWVW";
+	let eventButton = "March 15, 2021 17:10";
 
 	return (
 		<div>
@@ -116,7 +117,8 @@ const Sesion4 = () => {
 					<VideoLoader
 						videoUrl="https://youtu.be/yLPLFklI1hU"
 						urlRedirect={urlRedirect}
-						buttonText="inscribirme en el entrenamiento"
+						buttonText="Ir al Formulario"
+						adte={eventButton}
 					/>
 				</div>
 			</div>
@@ -124,22 +126,13 @@ const Sesion4 = () => {
 				<div className="preguntas">
 					<div>
 						<h1 className="preguntas__heading">
-							Cuéntanos tres cosas muy importantes para que podamos ayudarte:
+							¿Te gustaria seguir aprendiendo a incrementar tu numero de
+							pacientes?
 						</h1>
-						<div className="divider-left">
-							<ul>
-								<li className="preguntas__testimonios__list">
-									Escribe textualmente "yo tambien puedo incrementar mi número
-									de pacientes y duplicar mis ingresos"
-								</li>
-								<li className="preguntas__testimonios__list">
-									¿Qué forma de tener dinero online te gusta para ti?
-								</li>
-							</ul>
-						</div>
-						<p className="preguntas__testimonios__footer">
+
+						{/* <p className="preguntas__testimonios__footer">
 							!Nos vemos en los comentarios!
-						</p>
+						</p> */}
 					</div>
 					<div className="preguntas__facebook">
 						<CommentsFacebook />

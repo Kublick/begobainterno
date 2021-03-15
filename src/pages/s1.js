@@ -139,7 +139,7 @@ const Landing = () => {
 					</h1>
 					<div className="">
 						<VideoLoader
-							videoUrl="http://youtu.be/2uLODu3-Cpg"
+							videoUrl="https://youtu.be/eJ5KNnL_lCo"
 							urlRedirect={urlRedirect}
 							buttonText="descargar regalo"
 							date={eventButton}

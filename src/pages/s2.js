@@ -140,7 +140,7 @@ const Sesion2 = () => {
 				</h1>
 				<div className="">
 					<VideoLoader
-						videoUrl="https://youtu.be/ByX2ckVhwFk"
+						videoUrl="https://youtu.be/eJ5KNnL_lCo"
 						urlRedirect={urlRedirect}
 						buttonText="Unirte a la comunidad"
 						date={eventButton}
