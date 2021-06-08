@@ -10,37 +10,30 @@ const Sesion3 = () => {
 	const data = useStaticQuery(
 		graphql`
 			query {
-				sesion1: file(relativePath: { eq: "sesion1.png" }) {
+				sesion1: file(relativePath: { eq: "Clase1.png" }) {
 					childImageSharp {
 						fixed(quality: 90, width: 144) {
 							...GatsbyImageSharpFixed_withWebp
 						}
 					}
 				}
-				sesion2: file(relativePath: { eq: "sesion2.png" }) {
+				sesion2: file(relativePath: { eq: "Clase2.png" }) {
 					childImageSharp {
 						fixed(quality: 90, width: 144) {
 							...GatsbyImageSharpFixed_withWebp
 						}
 					}
 				}
-				sesion3: file(relativePath: { eq: "sesion3.png" }) {
+				sesion3: file(relativePath: { eq: "Clase3.png" }) {
 					childImageSharp {
 						fixed(quality: 90, width: 144) {
 							...GatsbyImageSharpFixed_withWebp
 						}
 					}
 				}
-				sesion4: file(relativePath: { eq: "sesion4.png" }) {
+				sesion4: file(relativePath: { eq: "Clase4.png" }) {
 					childImageSharp {
 						fixed(quality: 90, width: 144) {
-							...GatsbyImageSharpFixed_withWebp
-						}
-					}
-				}
-				facebook: file(relativePath: { eq: "fb.png" }) {
-					childImageSharp {
-						fixed(quality: 100, width: 72) {
 							...GatsbyImageSharpFixed_withWebp
 						}
 					}
@@ -52,11 +45,18 @@ const Sesion3 = () => {
 						}
 					}
 				}
+				facebook: file(relativePath: { eq: "fb.png" }) {
+					childImageSharp {
+						fixed(quality: 100, width: 72) {
+							...GatsbyImageSharpFixed_withWebp
+						}
+					}
+				}
 			}
 		`
 	);
-	let date = "March 15 2021 16:30";
-	let eventButton = "March 12, 2021 17:15";
+	let date = "June 30 2021 17:30";
+	let eventButton = "June 30, 2021 18:15";
 	let urlRedirect = "https://wa.me/message/LD54V7JCH3TXD1";
 
 	// const [sessionButton, setSessionButton] = useState(false);
@@ -92,7 +92,7 @@ const Sesion3 = () => {
 								Ahora Disponible
 							</p>
 							<Img fixed={data.sesion1.childImageSharp.fixed} />
-							<h2 className="cards__footer__title">Sesión 1</h2>
+							<h2 className="cards__footer__title">Clase 1</h2>
 							<p className="cards__footer__note">
 								Tu gran oportunidad de tener a tus pacientes en todo el mundo
 							</p>
@@ -104,7 +104,7 @@ const Sesion3 = () => {
 								Ahora Disponible
 							</p>
 							<Img fixed={data.sesion2.childImageSharp.fixed} />
-							<h2 className="cards__footer__title">Sesión 2</h2>
+							<h2 className="cards__footer__title">Clase 2</h2>
 							<p className="cards__footer__note">
 								7 formas de tener dinero 100% online y los 5 errores de novato
 							</p>
@@ -113,7 +113,7 @@ const Sesion3 = () => {
 					<div className="cards__body">
 						<p className="cards__top-text animate-pulsate">Ahora Disponible</p>
 						<Img fixed={data.sesion3.childImageSharp.fixed} />
-						<h2 className="cards__footer__title">Sesión 3</h2>
+						<h2 className="cards__footer__title">Clase 3</h2>
 						<p className="cards__footer__note">
 							Consigue tus primeros pacientes online con la estrategia D.E.P.E.
 						</p>
@@ -122,7 +122,7 @@ const Sesion3 = () => {
 						<Link to="/s4" className="cards__body">
 							<p className="cards__top-text">Proximamente</p>
 							<Img fixed={data.sesion4.childImageSharp.fixed} />
-							<h2 className="cards__footer__title">Sesión 4</h2>
+							<h2 className="cards__footer__title">Clase 4</h2>
 							<p className="cards__footer__note">
 								Vence tu inseguridad y tus miedos tu siguietne paso para vivir
 								de tus consultas
@@ -133,24 +133,24 @@ const Sesion3 = () => {
 			</div>
 
 			<div className="container">
-				<h1 className="video__heading">Sesión #3</h1>
+				<h1 className="video__heading">Clase #3</h1>
 				<h1 className="video__paragraph">
 					Consigue tus primeros pacientes online con la estrategia D.E.P.E.
 				</h1>
 				<div className="">
 					<VideoLoader
-						videoUrl="https://youtu.be/eJ5KNnL_lCo"
+						videoUrl="https://youtu.be/HlKVxcsD7ls"
 						urlRedirect={urlRedirect}
 						buttonText="Anotarme en la lista Prioritaria"
 						date={eventButton}
 					/>
 					<d iv className="m4">
 						<button className="mobileButton" onClick={() => redirectPrevious()}>
-							Sesión Anterior
+							Clase Anterior
 						</button>
 
 						<button className="mobileButton" onClick={() => redirectNext()}>
-							Siguiente Sesión
+							Siguiente Clase
 						</button>
 					</d>
 				</div>

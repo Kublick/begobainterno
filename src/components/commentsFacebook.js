@@ -16,6 +16,8 @@ const CommentsFacebook = (props) => {
 				data-href="https://www.begoba.com/interno"
 				data-numposts="15"
 				data-width="100%"
+				data-lazy="lazy"
+				data-order-by="reverse-time"
 			></div>
 		</div>
 	);
