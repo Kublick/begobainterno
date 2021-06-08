@@ -115,10 +115,10 @@ const Sesion4 = () => {
 				</h1>
 				<div className="">
 					<VideoLoader
-						videoUrl="https://youtu.be/yLPLFklI1hU"
+						videoUrl="https://youtu.be/eJ5KNnL_lCo"
 						urlRedirect={urlRedirect}
 						buttonText="Ir al Formulario"
-						adte={eventButton}
+						date={eventButton}
 					/>
 				</div>
 			</div>

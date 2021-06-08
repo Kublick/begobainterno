@@ -18,7 +18,7 @@ const VideoLoader = ({ videoUrl, urlRedirect, buttonText, date }) => {
 			if (currentDate > new Date(tempdate)) {
 				setButton(true);
 			}
-		}, 300000);
+		}, 1000);
 	}
 	timing();
 
