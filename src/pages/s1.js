@@ -59,6 +59,7 @@ const Landing = () => {
 	let date = "June 28 2021 17:30";
 	let eventButton = "June 28 2021 18:10";
 	let urlRedirect = "https://www.begoba.com/interno/regalo";
+
 	// const [sessionButton, setSessionButton] = useState(false);
 
 	// function timing() {
@@ -93,9 +94,9 @@ const Landing = () => {
 								Tu gran oportunidad de tener a tus pacientes en todo el mundo
 							</p>
 						</div>
-						<div className="cards__body">
+						<div className="cards__body__incoming">
 							<Link to="/s2" className="cards__body">
-								<p className="cards__top-text animate-pulsate">Proximamente!</p>
+								<p className="cards__top-text ">Proximamente!</p>
 								<Img fixed={data.sesion2.childImageSharp.fixed} />
 								<h2 className="cards__footer__title">Clase 2</h2>
 								<p className="cards__footer__note">
@@ -103,9 +104,9 @@ const Landing = () => {
 								</p>
 							</Link>
 						</div>
-						<div className="cards__body">
-							<Link to="/s3" className="cards__body">
-								<p className="cards__top-text animate-pulsate">Proximamente!</p>
+						<div className="cards__body__incoming">
+							<Link to="/s3" className="cards__body__incoming">
+								<p className="cards__top-text">Proximamente!</p>
 								<Img fixed={data.sesion3.childImageSharp.fixed} />
 								<h2 className="cards__footer__title">Clase 3</h2>
 								<p className="cards__footer__note">
@@ -114,9 +115,9 @@ const Landing = () => {
 								</p>
 							</Link>
 						</div>
-						<div className="cards__body">
+						<div className="cards__body__incoming">
 							<Link to="/s4" className="cards__body">
-								<p className="cards__top-text animate-pulsate">Proximamente!</p>
+								<p className="cards__top-text">Proximamente!</p>
 								<Img fixed={data.sesion4.childImageSharp.fixed} />
 								<h2 className="cards__footer__title">Clase 4</h2>
 								<p className="cards__footer__note">
@@ -163,10 +164,6 @@ const Landing = () => {
 									¿Cual es el mayor desafío que tuviste al querer vender tus
 									servicios profesionales en internet?
 								</li>
-								<li className="preguntas__testimonios__list">
-									¿Te gustaría aprender a vender tu servicio de consulta por
-									internet?
-								</li>
 							</ul>
 						</div>
 						<p className="preguntas__testimonios__footer">
@@ -180,7 +177,7 @@ const Landing = () => {
 
 				<div className="testimonios">
 					<div className="testimonios__social">
-						<a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
+						<a href="https://chat.whatsapp.com/Fp3dCGPAkU8HdS34FGrWY4">
 							<Img fixed={data.whatsapp.childImageSharp.fixed} />
 						</a>
 						<a href="https://www.facebook.com/groups/2375070212786505">

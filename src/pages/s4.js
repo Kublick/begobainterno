@@ -53,6 +53,11 @@ const Sesion4 = () => {
 	let urlRedirect = "https://es.surveymonkey.com/r/6DBTWVW";
 	let eventButton = "July 1, 2021 18:10";
 
+	let show = false;
+	if (new Date("July 1, 2021 19:00").getTime() < Date.now().toString()) {
+		show = true;
+	}
+
 	return (
 		<div>
 			<Header date={date} />
@@ -113,7 +118,7 @@ const Sesion4 = () => {
 					Vence tu inseguridad y tus miedos tu siguietne paso para vivir de tus
 					consultas
 				</h1>
-				<div className="">
+				<div>
 					<VideoLoader
 						videoUrl="https://youtu.be/xL4vvrUq4Kg"
 						urlRedirect={urlRedirect}
@@ -129,7 +134,44 @@ const Sesion4 = () => {
 							¿Te gustaria seguir aprendiendo a incrementar tu numero de
 							pacientes?
 						</h1>
-
+						<div className="preguntas__heading">
+							<button
+								className="communityButton communityButton--animated"
+								onClick={() =>
+									window.open("https://wa.me/message/LD54V7JCH3TXD1")
+								}
+							>
+								Recibe informacion envía un Whatsapp
+							</button>
+							{show ? (
+								<div className="testimonios">
+									<h4>Te Perdiste la Clase 1</h4>
+									<div className="testimonios__videos">
+										<ReactPlayer
+											url="https://youtu.be/wN8h9H2H7So"
+											width={380}
+											height={380}
+										/>
+									</div>
+									<h4>Te Perdiste la Clase 2</h4>
+									<div className="testimonios__videos">
+										<ReactPlayer
+											url="https://youtu.be/BURILmkSxTg"
+											width={380}
+											height={380}
+										/>
+									</div>
+									<h4>Te Perdiste la Clase 3</h4>
+									<div className="testimonios__videos">
+										<ReactPlayer
+											url="https://youtu.be/HlKVxcsD7ls"
+											width={380}
+											height={380}
+										/>
+									</div>
+								</div>
+							) : null}
+						</div>
 						{/* <p className="preguntas__testimonios__footer">
 							!Nos vemos en los comentarios!
 						</p> */}
@@ -141,13 +183,13 @@ const Sesion4 = () => {
 
 				<div className="testimonios">
 					<div className="testimonios__social">
-						<a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
+						{/* <a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
 							<Img fixed={data.whatsapp.childImageSharp.fixed} />
-						</a>
+						</a> */}
 					</div>
 					<div className="testimonios__videos">
 						<ReactPlayer
-							url="https://youtu.be/iGA3w0YVac8"
+							url="https://youtu.be/z9CsFqeleUo"
 							width={320}
 							height={320}
 						/>
@@ -155,28 +197,11 @@ const Sesion4 = () => {
 
 					<div className="testimonios__videos">
 						<ReactPlayer
-							url="https://youtu.be/c1XGvy-ynZs"
+							url="https://youtu.be/wXHrOaaJZoM"
 							width={320}
 							height={320}
 						/>
 					</div>
-					<ReactPlayer
-						url="https://youtu.be/NmL3jxP9BB0"
-						width={320}
-						height={320}
-					/>
-					<div className="testimonios__videos">
-						<ReactPlayer
-							url="https://youtu.be/6_MBqp7E3Zw"
-							width={320}
-							height={320}
-						/>
-					</div>
-					<ReactPlayer
-						url="https://youtu.be/gpXgrVIJrms"
-						width={320}
-						height={320}
-					/>
 				</div>
 			</div>
 		</div>

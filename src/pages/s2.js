@@ -106,11 +106,9 @@ const Sesion2 = () => {
 							7 formas de tener dinero 100% online y los 5 errores de novato
 						</p>
 					</div>
-					<div className="cards__body">
+					<div className="cards__body__incoming">
 						<Link to="/s3" className="cards__body">
-							<p className="cards__top-text animate-pulsate">
-								Ahora Disponible
-							</p>
+							<p className="cards__top-text">Proximamente</p>
 							<Img fixed={data.sesion3.childImageSharp.fixed} />
 							<h2 className="cards__footer__title">Clase 3</h2>
 							<p className="cards__footer__note">
@@ -119,9 +117,9 @@ const Sesion2 = () => {
 							</p>
 						</Link>
 					</div>
-					<div className="cards__body">
+					<div className="cards__body__incoming">
 						<Link to="/s3" className="cards__body">
-							<p className="cards__top-text animate-pulsate">Proximamente</p>
+							<p className="cards__top-text">Proximamente</p>
 							<Img fixed={data.sesion4.childImageSharp.fixed} />
 							<h2 className="cards__footer__title">Clase 4</h2>
 							<p className="cards__footer__note">
@@ -170,10 +168,6 @@ const Sesion2 = () => {
 						<div className="divider-left">
 							<ul>
 								<li className="preguntas__testimonios__list">
-									Escribe textualmente "yo tambien puedo incrementar mi número
-									de pacientes y duplicar mis ingresos"
-								</li>
-								<li className="preguntas__testimonios__list">
 									¿Qué forma de tener dinero online te gusta para ti?
 								</li>
 							</ul>
@@ -189,7 +183,7 @@ const Sesion2 = () => {
 
 				<div className="testimonios">
 					<div className="testimonios__social">
-						<a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
+						<a href="https://chat.whatsapp.com/Fp3dCGPAkU8HdS34FGrWY4">
 							<Img fixed={data.whatsapp.childImageSharp.fixed} />
 						</a>
 						<a href="https://www.facebook.com/groups/2375070212786505">

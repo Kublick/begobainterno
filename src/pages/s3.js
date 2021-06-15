@@ -118,7 +118,7 @@ const Sesion3 = () => {
 							Consigue tus primeros pacientes online con la estrategia D.E.P.E.
 						</p>
 					</div>
-					<div className="cards__body">
+					<div className="cards__body__incoming">
 						<Link to="/s4" className="cards__body">
 							<p className="cards__top-text">Proximamente</p>
 							<Img fixed={data.sesion4.childImageSharp.fixed} />
@@ -144,7 +144,7 @@ const Sesion3 = () => {
 						buttonText="Anotarme en la lista Prioritaria"
 						date={eventButton}
 					/>
-					<d iv className="m4">
+					<div className="m4">
 						<button className="mobileButton" onClick={() => redirectPrevious()}>
 							Clase Anterior
 						</button>
@@ -152,7 +152,7 @@ const Sesion3 = () => {
 						<button className="mobileButton" onClick={() => redirectNext()}>
 							Siguiente Clase
 						</button>
-					</d>
+					</div>
 				</div>
 			</div>
 
@@ -164,12 +164,6 @@ const Sesion3 = () => {
 						</h1>
 						<div className="divider-left">
 							<ul>
-								<li className="preguntas__testimonios__list">
-									¿Cuál es tu proposito?
-								</li>
-								<li className="preguntas__testimonios__list">
-									¿Cual es tu sueño?
-								</li>
 								<li className="preguntas__testimonios__list">
 									¿Qué es lo que verdaderamente te motiva para tomar acción y
 									duplicar tus ingresos?
@@ -187,7 +181,7 @@ const Sesion3 = () => {
 
 				<div className="testimonios">
 					<div className="testimonios__social">
-						<a href="https://chat.whatsapp.com/BspYI1xBIWlJvnuqIERaTf">
+						<a href="https://chat.whatsapp.com/Fp3dCGPAkU8HdS34FGrWY4">
 							<Img fixed={data.whatsapp.childImageSharp.fixed} />
 						</a>
 						<a href="https://www.facebook.com/groups/2375070212786505">

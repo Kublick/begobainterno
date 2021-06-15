@@ -50,6 +50,7 @@
 		align-items: center;
 		border-radius: 12px;
 		opacity: 0.5;
+		pointer-events: none;
 	}
 
 	&__footer {
@@ -483,4 +484,13 @@
 		justify-content: center;
 		padding: 2rem 2rem;
 	}
+}
+
+.btn-whatsapp {
+	padding: 2rem 2rem 2rem 2rem;
+	background-color: var(--color-button-green);
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 16px;
 }
